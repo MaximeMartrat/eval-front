@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Eval DOM</title>
+</head>
+<body>
+    <nav>
+        <button id="displaynav">...</button>
+        <ul id="navbar">
+            <li><button id="module1">MODULE 1</button></li>
+            <li><button id="module2">MODULE 2</button></li>
+            <li><button id="module3">MODULE 3</button></li>
+            <li><button id="module4">MODULE 4</button></li>
+            <li><button id="module5">MODULE 5</button></li>
+        </ul>
+    </nav>
+    <div id="plateau">
+        <section>
+            <h2>MODULE 1</h2>
+            <div id="mod1">
+                <table id="tab1">
+                    <tr>
+                        <td id="l1">link1</td>
+                        <td id="l2">link2</td>
+                        <td id="l3">link3</td>
+                    </tr>
+                    <tr>
+                        <td id="l4">link4</td>
+                        <td id="l5">link5</td>
+                        <td id="l6">link6</td>
+                    </tr>
+                    <tr>
+                        <td id="l7">link7</td>
+                        <td id="l8">link8</td>
+                        <td id="l9">link9</td>
+                    </tr>
+                </table>
+                <img id="avatar" src="/assets_img/zombie.png">
+            </div>
+        </section>
+        <section>
+            <h2>MODULE 2</h2>
+            <div id="mod2">
+                <input type="text" id="nom" name="nom" placeholder="input1/nom">
+                <input type="text" id="prenom" name="prenom" placeholder="input2/prenom">
+                <button id="add">add</button>
+                <table id="perso">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Table</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h2>MODULE 3</h2>
+            <div id="mod3">
+                <select name="menu" id="menu" onclick="stylish()">
+                    <option value="style1">Style 1</option>
+                    <option value="style2">Style 2</option>
+                    <option value="style3">Style 3</option>
+                </select>
+                <p id="lorem"><span>Paragraph :</span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae obcaecati, debitis animi modi minima corrupti fugit fugiat commodi sapiente quas doloremque blanditiis. Veritatis, unde? Laborum possimus itaque natus odit eligendi?
+                Error delectus explicabo dicta dolorem ut ducimus possimus fugiat esse adipisci ea dolor iusto reiciendis id incidunt vitae voluptatum architecto pariatur at aliquam est, autem corporis non! Magnam, omnis amet.</p>
+            </div>
+        </section>
+        <section>
+            <h2>MODULE 4</h2>
+            <div id="mod4">
+                <ul id="exemple">
+                    <li>Value1</li>
+                    <li>Value2</li>
+                    <li>Value3</li>
+                    <li>Value4</li>
+                </ul>
+                <ul id="random">
+                    <li class="valeur">Value1</li>
+                    <li class="valeur">Value2</li>
+                    <li class="valeur">Value3</li>
+                    <li class="valeur">Value4</li>
+                </ul>
+                <button id="up">up</button>
+                <button id="down">down</button>
+            </div>
+        </section>
+        <section>
+            <h2>MODULE 5</h2>
+            <div id="mod5">
+                <div id="checkbox">
+                    <input type="checkbox" id="opt1" name="item" value="Option 1">
+                    <label for="opt1">Option 1</label><br>
+                    <input type="checkbox" id="opt2" name="item" value="Option 2">
+                    <label for="opt2">Option 2</label><br>
+                    <input type="checkbox" id="opt3" name="item" value="Option 3">
+                    <label for="opt3">Option 3</label><br>
+                    <input type="checkbox" id="opt4" name="item" value="Option 4">
+                    <label for="opt4">Option 4</label><br>
+                </div>
+                <div id="radio">
+                    <input type="radio" id="the_div" name="display" value="div" onclick="display()">
+                    <label for="the_div">div</label>
+                    <input type="radio" id="option" name="display" value="select" onclick="display()">
+                    <label for="option">opt</label>
+                </div>
+                <div id="result"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
