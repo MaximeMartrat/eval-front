@@ -138,7 +138,7 @@
             }
             else if(menu2 == "style3"){
                 text.style.color = "#DB1342";
-                text.style.fontSize = "20px";
+                text.style.fontSize = "12px";
                 text.style.fontFamily = "Georgia";
             }
             else {
