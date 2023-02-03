@@ -91,10 +91,10 @@ nav{
     margin-right: auto;
     margin-top: 20%;
     border-collapse: collapse;
-    border: 1px solid black;
+    border: 1px solid #222222;
 }
 #tab1 td{
-    border: 1px solid black;
+    border: 1px solid #222222;
 }
 #tab1 td:hover{
     background-color: #DB1342;
@@ -115,7 +115,7 @@ nav{
     height:50%;
     width:70%;
     margin: auto;
-    border: 3px double black;
+    border: 3px double #222222;
     text-align: center;
     cursor: pointer;
 }
@@ -126,7 +126,7 @@ nav{
     height:40%;
     width:20%;
     padding:1%;
-    border: 3px double black;
+    border: 3px double #222222;
     border-radius: 10%;
     margin: auto;
     margin-right: 60%;
@@ -144,11 +144,10 @@ nav{
     margin-right: auto;
     margin-top: 20%;
     border-collapse: collapse;
-    border: 1px solid black;
+    border: 1px solid #222222;
 }
 #perso td{
-    border: 1px solid black;
-    height: 60px;
+    border: 1px solid #222222;
 }
 #perso thead{
     height:60px;
@@ -188,7 +187,7 @@ nav{
     height:50%;
     width: 50%;
     margin: auto;
-    border: 3px double black;
+    border: 3px double #222222;
     border-radius: 5px;
 }
 #up:hover, #down:hover{
@@ -203,7 +202,7 @@ nav{
 #checkbox{
     grid-row: 1;
     display: block;
-    border: 1px solid black;
+    border: 1px solid #222222;
     height: 85%;
     width: 60%;
     margin: auto;

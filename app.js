@@ -117,7 +117,7 @@
             alert("Veuillez remplir tous les champs")
         } else {
             //creation de l'objet personnage dans le tableau
-            perso.innerHTML += "<tr><td>" + nom + "</td><td>" + prenom + "</td></tr>"                
+            perso.innerHTML += "<tr><td colspan='1'>" + nom + "</td><td colspan='1'>" + prenom + "</td></tr>"                
         }
     });
 
