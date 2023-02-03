@@ -2,65 +2,39 @@
     //recupération des données du DOM
     let menu = document.getElementById("displaynav");
     let navi = document.getElementById("navbar");
-    let module1 = document.getElementById("module1");
-    let module2 = document.getElementById("module2");
-    let module3 = document.getElementById("module3");
-    let module4 = document.getElementById("module4");
-    let module5 = document.getElementById("module5");  
-    let mod1 = document.getElementById("mod1");
-    let mod2 = document.getElementById("mod2");
-    let mod3 = document.getElementById("mod3");
-    let mod4 = document.getElementById("mod4");
-    let mod5 = document.getElementById("mod5");
-    //appel de la fonction pour faire apparaitre/disparaitre element
+    //appel de la fonction d'affichage pour tous les btn
     eventit(menu, navi);
     eventit(module1, mod1);
     eventit(module2, mod2);
     eventit(module3, mod3);
     eventit(module4, mod4);
     eventit(module5, mod5);
-    //fonction d'appel de la fct displayit
+    //fonction d'ecouteur et d'affichage
     function eventit(event, target){
+        //ecouteurs du btn pour changer le display des modules
         event.addEventListener('click', function(){
-            displayit(target)
+            if (target.style.display == "grid"){
+                target.style.display = "none"
+            } else {
+                target.style.display = "grid"
+            }
         })
-    };
-    //fonction pour faire apparaitre et disparaitre un élément
-    function displayit(e){
-        if (e.style.display == "grid"){
-            e.style.display = "none"
-        } else {
-            e.style.display = "grid"
-        }
     };
     
     
 //MODULE1
     //recupération du dom
-    let link1 = document.getElementById("l1");
-    let link2 = document.getElementById("l2");
-    let link3 = document.getElementById("l3");
-    let link4 = document.getElementById("l4");
-    let link5 = document.getElementById("l5");
-    let link6 = document.getElementById("l6");
-    let link7 = document.getElementById("l7");
-    let link8 = document.getElementById("l8");
-    let link9 = document.getElementById("l9");
     let images = document.getElementById("avatar");
-    //appel de la fonction mouseIt
-    mouseIt(link1);
-    mouseIt(link2);
-    mouseIt(link3);
-    mouseIt(link4);
-    mouseIt(link5);
-    mouseIt(link6);
-    mouseIt(link7);
-    mouseIt(link8);
-    mouseIt(link9);
-    //fonction d'ecoute d'évènements (mouseover, mouseout)
-    function mouseIt(e){
-        e.addEventListener("mouseover", mouseOver);
-        e.addEventListener("mouseout", mouseOut);
+    //initialisation tableau vide
+    let links = [];
+    //boucle pour envoyer les liens dans le tableau
+    for (let i = 1; i <= 9; i++){
+        links.push(document.getElementById("l" + i));
+    }
+    //boucle pour appliquer la fonction d'écoute à tous les liens
+    for (let i = 0; i < 9; i++){
+        links[i].addEventListener("mouseover", mouseOver);
+        links[i].addEventListener("mouseout", mouseOut);
     }
     //fonction d'apparition et de changement d'image au survol
     function mouseOver() {
@@ -68,29 +42,29 @@
         images.style.transition = "all 0.5s ease-in-out";
         images.style.visibility = "visible";
         //vérification du link survolé et changement de src de l'image
-        switch(this) {
-            case link1:
+        switch(this.id) {
+            case "l1":
                 images.src = "/assets_img/lapin.png"
                 break;
-            case link2:
+            case "l2":
                 images.src= "/assets_img/aigle.png"
                 break;
-            case link3:
+            case "l3":
                 images.src = "/assets_img/chat.webp"
                 break;
-            case link4:
+            case "l4":
                 images.src = "/assets_img/chien.png"
                 break;
-            case link5:
+            case "l5":
                 images.src = "/assets_img/cochon.png"
                 break;
-            case link6:
+            case "l6":
                 images.src = "/assets_img/demon.png"
                 break;
-            case link7:
+            case "l7":
                 images.src = "/assets_img/king.png"
                 break;
-            case link8:
+            case "l8":
                 images.src = "/assets_img/vache.png"
                 break;
             default:
@@ -117,7 +91,7 @@
             alert("Veuillez remplir tous les champs")
         } else {
             //creation de l'objet personnage dans le tableau
-            perso.innerHTML += "<tr><td colspan='1'>" + nom + "</td><td colspan='1'>" + prenom + "</td></tr>"                
+            perso.innerHTML += "<tr><td>" + nom + "</td><td>" + prenom + "</td></tr>"                
         }
     });
 
