@@ -1,14 +1,11 @@
 //NAV
-    //recupération des données du DOM
-    let menu = document.getElementById("displaynav");
-    let navi = document.getElementById("navbar");
     //appel de la fonction d'affichage pour tous les btn
-    eventit(menu, navi);
-    eventit(module1, mod1);
-    eventit(module2, mod2);
-    eventit(module3, mod3);
-    eventit(module4, mod4);
-    eventit(module5, mod5);
+    eventit(hidden_nav, navbar);
+    eventit(modul1, mod1);
+    eventit(modul2, mod2);
+    eventit(modul3, mod3);
+    eventit(modul4, mod4);
+    eventit(modul5, mod5);
     //fonction d'ecouteur et d'affichage
     function eventit(event, target){
         //ecouteurs du btn pour changer le display des modules
@@ -23,8 +20,6 @@
     
     
 //MODULE1
-    //recupération du dom
-    let images = document.getElementById("avatar");
     //initialisation tableau vide
     let links = [];
     //boucle pour envoyer les liens dans le tableau
@@ -39,50 +34,47 @@
     //fonction d'apparition et de changement d'image au survol
     function mouseOver() {
         //apparition de l'image
-        images.style.transition = "all 0.5s ease-in-out";
-        images.style.visibility = "visible";
+        avatar.style.transition = "all 0.5s ease-in-out";
+        avatar.style.visibility = "visible";
         //vérification du link survolé et changement de src de l'image
         switch(this.id) {
             case "l1":
-                images.src = "/assets_img/lapin.png"
+                avatar.src = "/assets_img/lapin.png"
                 break;
             case "l2":
-                images.src= "/assets_img/aigle.png"
+                avatar.src= "/assets_img/aigle.png"
                 break;
             case "l3":
-                images.src = "/assets_img/chat.webp"
+                avatar.src = "/assets_img/chat.webp"
                 break;
             case "l4":
-                images.src = "/assets_img/chien.png"
+                avatar.src = "/assets_img/chien.png"
                 break;
             case "l5":
-                images.src = "/assets_img/cochon.png"
+                avatar.src = "/assets_img/cochon.png"
                 break;
             case "l6":
-                images.src = "/assets_img/demon.png"
+                avatar.src = "/assets_img/demon.png"
                 break;
             case "l7":
-                images.src = "/assets_img/king.png"
+                avatar.src = "/assets_img/king.png"
                 break;
             case "l8":
-                images.src = "/assets_img/vache.png"
+                avatar.src = "/assets_img/vache.png"
                 break;
             default:
-                images.src = "/assets_img/zombie.png"
+                avatar.src = "/assets_img/zombie.png"
         }
     };
     //fonction de disparition après survol 
     function mouseOut() {
-        images.style.visibility = "hidden";
+        avatar.style.visibility = "hidden";
     };
 
 
-//MODULE2
-    //recuperation des données
-    let valid = document.getElementById("add");
-    let perso = document.getElementById("perso")  
+//MODULE2  
     //listener de l'évènement click sur le bouton
-    valid.addEventListener('click', function(){
+    add.addEventListener('click', function(){
         //recupération des valeurs du formulaire
         let nom = document.getElementById("nom").value;
         let prenom = document.getElementById("prenom").value;
@@ -103,22 +95,21 @@
     function stylish(){
         //recupération des données
         let menu2 = document.getElementById("menu").value;
-        let text = document.getElementById("lorem");
             //verification de l'opt selectionnée et changement de style en fct
             if(menu2 == "style2"){
-                text.style.color = "rgb(95, 95, 250)";
-                text.style.fontFamily = "Courier New";
-                text.style.fontSize = "15px";
+                lorem.style.color = "rgb(95, 95, 250)";
+                lorem.style.fontFamily = "Courier New";
+                lorem.style.fontSize = "15px";
             }
             else if(menu2 == "style3"){
-                text.style.color = "#DB1342";
-                text.style.fontSize = "12px";
-                text.style.fontFamily = "Georgia";
+                lorem.style.color = "#DB1342";
+                lorem.style.fontSize = "12px";
+                lorem.style.fontFamily = "Georgia";
             }
             else {
-                text.style.color = "black";
-                text.style.fontFamily = "arial";
-                text.style.fontSize = "15px";
+                lorem.style.color = "black";
+                lorem.style.fontFamily = "arial";
+                lorem.style.fontSize = "15px";
             }
         }
 
@@ -126,13 +117,11 @@
 //MODULE4
     //je récupère mes li et mes boutons que je place dans des variables
     let randomise = document.getElementsByClassName("valeur");
-    let toUp = document.getElementById("up");
-    let toDown = document.getElementById("down");
     //je crée un tableau avec pour éléments les valeurs des li
     let tabli = ["Value1", "Value2", "Value3", "Value4"];
     //je créer un écouteur d'évènement au clic sur les boutons up et down pour lancer les fonctions haut et bas
-    toUp.addEventListener('click', haut);
-    toDown.addEventListener('click', bas);
+    up.addEventListener('click', haut);
+    down.addEventListener('click', bas);
     //fonction pour le up
     function haut(){
         //je retire la première valeur du tableau avec la methode shift
@@ -178,7 +167,6 @@
         }
         //récupération de la valeurs de la radio sélectionnée et de la cible
         let radioValue = document.querySelector('input[name="display"]:checked').value;
-        let result = document.getElementById("result");
         //réinitialisation de la cible à chaque click
         result.innerHTML = "";
         //vérification de la valeur de la radio sélectionnée

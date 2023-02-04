@@ -20,7 +20,7 @@ nav{
     grid-template-columns: 10% 80% 10%;
     border:1px solid #222222;
 }
-#displaynav{
+#hidden_nav{
     grid-column: 1;
     grid-row: 2;
     width:35%;
@@ -31,7 +31,7 @@ nav{
     border: 1px solid #222222;
     cursor: pointer;
 }
-#displaynav:hover{
+#hidden_nav:hover{
     background-color: #DB1342;
     color:white;
     border: 3px double white;
@@ -51,7 +51,7 @@ nav{
 #navbar:hover{
     border-color: #DB1342;
 }
-#module1, #module2, #module3, #module4, #module5{
+#modul1, #modul2, #modul3, #modul4, #modul5{
     width:100%;
     height:100%;
     color: #222222;
@@ -59,7 +59,7 @@ nav{
     border:1px solid white;
     cursor: pointer;
 }
-#module1:hover, #module2:hover, #module3:hover, #module4:hover, #module5:hover{
+#modul1:hover, #modul2:hover, #modul3:hover, #modul4:hover, #modul5:hover{
     border:1px solid #DB1342;
     color: #DB1342;
     transition: ease-in-out 0.2s;
